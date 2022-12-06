@@ -25,44 +25,6 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- /* Nav Bar */
-
- nav {
-  background-color: #00549C;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: 120px;
-  color: #ffffff;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-bottom: .5em;
-  position: fixed;
-  top: 0;
-  width: 100%; 
- }
-
- nav .logo {
-  font-family: Bungee, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  display: flex;
-  font-size: 50px;
- }
-
- nav .call-to-action {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 50px;
-  font-size: 100%;
- }
-
- nav .c-a-t-phrase {
-  display: flex;
-  justify-content: center;
- }
-
- nav i {
-  display: flex;
-  justify-content: center;
-  color: #DB4C31;
- }
+main {
+  
+}

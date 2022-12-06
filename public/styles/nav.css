@@ -1,0 +1,40 @@
+/* Nav Bar Styling */
+
+nav {
+  background-color: #A20021;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 120px;
+  color: #ffffff;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: .5em;
+  position: fixed;
+  width: 100%;
+ }
+
+ nav .logo {
+  font-family: Bungee, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  font-size: 50px;
+ }
+
+ nav .call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50px;
+  font-size: 100%;
+ }
+
+ nav .c-a-t-phrase {
+  display: flex;
+  justify-content: center;
+ }
+
+ nav i {
+  display: flex;
+  justify-content: center;
+  color: #F3752B;
+ }
