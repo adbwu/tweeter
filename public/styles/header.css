@@ -1,4 +1,4 @@
-header {
+header.profile {
   background-color: #f52f57;
   background-image: url("https://www.transparenttextures.com/patterns/rice-paper-2.png");
   padding-top: 120px;
@@ -10,7 +10,7 @@ header {
   color: #ffffff;
 }
 
-header .profile-img, header .profile-name {
+header.profile .profile-img, header .profile-name {
   display: flex;
   justify-content: center;
 }
