@@ -54,6 +54,11 @@ button.tweet-btn {
   padding: 5px 10px;
 }
 
+button.negative {
+  background-color: #866b70;
+  color: #b5aaad;
+}
+
 output.negative {
   color: red;
 }

@@ -1,12 +1,21 @@
+// gets tweet length and sets counter value to remaining characters
 $(document).ready(function () {
   $("#tweet-text:input").keydown(function(){
-    let tweetLength = $(this).val().length;
-    let counter = $(this).parents("form").find(".counter");
-    let newCounter = 140 - tweetLength;
+    const tweetLength = $(this).val().length;
+    const counter = $(this).parents("form").find(".counter");
+    const button = $(this).parents("form").find("button")
+    const newCounter = 140 - tweetLength;
     if (newCounter < 0 ) {
-      counter.addClass("negative")
+      //adds a negative class to counter and button for CSS styling
+      counter.addClass("negative");
+      button.addClass("negative");
+      //removes button functionality when tweet is too long
+      $("button").prop("disabled", true);
     } else {
-      counter.removeClass("negative")
+      //returns styling and functionality when character count is ok
+      counter.removeClass("negative");
+      button.removeClass("negative");
+      $("button").prop("disabled", false);
     }
     counter.val(newCounter);
   });
