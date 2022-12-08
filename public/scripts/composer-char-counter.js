@@ -4,8 +4,9 @@ $(document).ready(function () {
     let counter = $(this).parents("form").find(".counter");
     let newCounter = 140 - tweetLength;
     if (newCounter < 0 ) {
-      counter.toggleClass("negative")
-      console.log(counter.attr('class'))
+      counter.addClass("negative")
+    } else {
+      counter.removeClass("negative")
     }
     counter.val(newCounter);
   });
