@@ -29,11 +29,10 @@ $(document).ready(function () {
     }
   ]
 
-  //
+  //creates DOM for tweet with provided data
   const createTweetElement = (tweetData) => {
     //converts millisecond time to "time ago" format
     const ago = moment(tweetData.created_at).fromNow();
-    //creates DOM for tweet with provided data
     return $(`<article class="tweet">
     <header>
       <div class="user">
