@@ -3,7 +3,13 @@ article.tweet {
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  border: 3px solid black;
+  border: 3px solid black; 
+  margin-bottom:20px;
+}
+
+article.tweet:hover {
+  -webkit-box-shadow: 8px 8px 0px -2px rgba(245,47,87,0.19); 
+  box-shadow: 8px 8px 0px -2px rgba(245,47,87,0.19);
 }
 
 article.tweet header {
@@ -13,8 +19,9 @@ article.tweet header {
   align-content: flex-start;
   align-items: center;
   height: 70px;
-  width: 90%;
-  padding-top: 15px
+  width: 92%;
+  padding-top: 15px;
+  font-size: 20px
 }
 
 article.tweet .user{
@@ -33,10 +40,12 @@ article.tweet .content {
   flex-direction: row;
   align-items: center;
   justify-content: left;
-  min-height: 100px;
+  min-height: 80px;
   width: 95%;
+  margin-top: 10px;
   border: 0px;
   border-bottom: 3px solid black;
+  padding: 10px 10px 20px 10px;
 }
 
 
@@ -45,8 +54,27 @@ article.tweet footer {
   flex-direction: row;
   justify-content: space-between;
   align-content: flex-start;
-  height: 30px;
-  width: 90%;
-  padding-top: 5px;
+  height: auto;
+  width: 92%;
+  margin: 8px 0 15px 0;
   font-size: 14px;
+}
+
+article.tweet footer .action-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 60px;
+  color: black;
+}
+
+article.tweet footer .action-icons a {
+  color: black;
+}
+
+article.tweet footer .action-icons a:hover {
+  color: #F3752B;
+}
+
+article.tweet footer .action-icons a:active {
+  color: #F79D5C;
 }
