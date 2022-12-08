@@ -15,7 +15,7 @@ $(document).ready(function () {
       "content": {
         "text": "If I have seen further it is by standing on the shoulders of giants"
       },
-      "created_at": 1461116232227
+      "created_at": 1670281571000
     },
     {
       "user": {
@@ -25,11 +25,15 @@ $(document).ready(function () {
       "content": {
         "text": "Je pense , donc je suis"
       },
-      "created_at": 1461113959088
+      "created_at": 1670540837000
     }
   ]
 
+  //
   const createTweetElement = (tweetData) => {
+    //converts millisecond time to "time ago" format
+    const ago = moment(tweetData.created_at).fromNow();
+    //creates DOM for tweet with provided data
     return $(`<article class="tweet">
     <header>
       <div class="user">
@@ -43,7 +47,7 @@ $(document).ready(function () {
     </div>
     <footer>
       <div class="since">
-        ${tweetData.created_at} ago
+        ${ago}
       </div>
       <div class="action-icons">
         <a href="/report"><i class="bi bi-flag-fill"></i></a>
@@ -54,29 +58,12 @@ $(document).ready(function () {
   </article>`      
   )};
 
+  //loops through data, creates tweet with fuction call and renders to page
   const renderTweets = function(tweets, callback) {
     data.forEach( (entry) => {
     const $tweet = createTweetElement(entry);
     $('#tweets-container').append($tweet)});
   }
-  
+
   renderTweets(data);
-  // Test / driver code (temporary). Eventually will get this from the server.
-  // const tweetData = {
-  //   "user": {
-  //     "name": "Newton",
-  //     "avatars": "https://i.imgur.com/73hZDYK.png",
-  //       "handle": "@SirIsaac"
-  //     },
-  //   "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //   "created_at": 1461116232227
-  // }
-
-  // const $tweet = createTweetElement(tweetData);
-
-  // // Test / driver code (temporary)
-  // console.log($tweet); // to see what it looks like
-  // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 });
