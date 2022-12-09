@@ -9,12 +9,21 @@ $(document).ready(function () {
     $('#post-tweet').submit(function (event){
       event.preventDefault();
       const text = $( this ).serialize();
-      console.log(text);
-      $.ajax({
-        type: "POST",
-        url: "/tweets",
-        data: text
-      });
+      console.log(decodeURI(text).length);
+      if (decodeURI(text).length === 5) {
+        console.log("true");
+        alert( "Tweets cannot be empty!" );
+      } else if (decodeURI(text).length > 146) {
+        console.log("too long");
+        console.log(decodeURI(text));
+        alert( "Tweets must be 140 characters or less!" );
+      } else {
+          $.ajax({
+          type: "POST",
+          url: "/tweets",
+          data: text
+        });
+      }
     });
   });
 

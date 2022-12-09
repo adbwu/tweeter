@@ -9,16 +9,17 @@ $(document).ready(function () {
       //adds a negative class to counter and button for CSS styling
       counter.addClass("negative");
       button.addClass("negative");
-      button.removeClass("positive");
-      //removes button functionality when tweet is too long
-      $("button").prop("disabled", true);
+      button.removeClass("positive"); 
+    } else if (newCounter === 140 ) {
+      //adds a negative class to counter and button for CSS styling
+      button.addClass("negative");
+      button.removeClass("positive");  
     } else {
       //returns styling and functionality when character count is ok
       counter.removeClass("negative");
       button.removeClass("negative");
       button.addClass("positive");
-      $("button").prop("disabled", false);
     }
     counter.val(newCounter);
-  });
+    });
 }); 
