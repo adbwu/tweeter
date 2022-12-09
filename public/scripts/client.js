@@ -3,31 +3,20 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(document).ready(function () {
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1670281571000
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1670540837000
-    }
-  ]
+  $(function() {
+    $('#post-tweet').submit(function (event){
+      event.preventDefault();
+      const text = $( this ).serialize();
+      console.log(text);
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: text
+      });
+    });
+  });
 
   //creates DOM for tweet with provided data
   const createTweetElement = (tweetData) => {
@@ -64,5 +53,10 @@ $(document).ready(function () {
     $('#tweets-container').append($tweet)});
   }
 
-  renderTweets(data);
+
+  const loadTweets = $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+  .then(console.log("got"));
+   
+
+  loadTweets();
 });
