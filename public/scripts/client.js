@@ -12,11 +12,8 @@ $(document).ready(function () {
       const text = decodeURI($( this ).serialize());
       console.log(text);
       if (decodeURI(text).length === 5) {
-        console.log("true");
         alert( "Tweets cannot be empty!" );
       } else if (decodeURI(text).length > 146) {
-        console.log("too long");
-        console.log(decodeURI(text));
         alert( "Tweets must be 140 characters or less!" );
       } else {
           $.ajax({
@@ -25,6 +22,7 @@ $(document).ready(function () {
           data: text
         });
         loadTweets();
+        $("#post-tweet-form").trigger("reset");
       }
     });
   });
