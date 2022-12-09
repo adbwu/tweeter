@@ -63,9 +63,10 @@ $(document).ready(function () {
   }
 
 
-  const loadTweets = $.ajax('http://localhost:8080/tweets', { method: 'GET' })
-  .then(console.log("got"));
-   
-
+  const loadTweets =  $(function() {
+    $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+    .then(console.log("got"));
+  })
+  
   loadTweets();
 });
