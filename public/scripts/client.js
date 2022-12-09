@@ -4,12 +4,13 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 $(document).ready(function () {
   $(function() {
-    $('#post-tweet').submit(function (event){
+    $('#post-tweet-form').submit(function (event){
       event.preventDefault();
-      const text = $( this ).serialize();
-      console.log(decodeURI(text).length);
+      const text = decodeURI($( this ).serialize());
+      console.log(text);
       if (decodeURI(text).length === 5) {
         console.log("true");
         alert( "Tweets cannot be empty!" );
@@ -57,16 +58,18 @@ $(document).ready(function () {
 
   //loops through data, creates tweet with fuction call and renders to page
   const renderTweets = function(tweets, callback) {
-    data.forEach( (entry) => {
+    console.log(tweets);
+    tweets.forEach( (entry) => {
     const $tweet = createTweetElement(entry);
     $('#tweets-container').append($tweet)});
   }
 
 
-  const loadTweets =  $(function() {
-    $.ajax('http://localhost:8080/tweets', { method: 'GET' })
-    .then(console.log("got"));
-  })
+  const loadTweets = (() => {
+    $.get('http://localhost:8080/tweets', (tweets) => { 
+    console.log(tweets);
+    renderTweets(tweets);
+  })});
   
   loadTweets();
 });
