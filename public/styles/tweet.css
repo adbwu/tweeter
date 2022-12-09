@@ -1,5 +1,6 @@
 #tweets-container {
   display: flex;
+  /* puts the most recent tweet on top*/
   flex-direction: column-reverse;
 }
 

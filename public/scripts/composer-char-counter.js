@@ -1,6 +1,6 @@
 // gets tweet length and sets counter value to remaining characters
 $(document).ready(function () {
-  $("#tweet-text:input").keydown(function(){
+  $("#tweet-text:input").on("input", (function(){
     const tweetLength = $(this).val().length;
     const counter = $(this).parents("form").find(".counter");
     const button = $(this).parents("form").find("button")
@@ -21,5 +21,5 @@ $(document).ready(function () {
       button.addClass("positive");
     }
     counter.val(newCounter);
-    });
+    }));
 }); 
