@@ -24,14 +24,23 @@ $(document).ready(function () {
           url: "/tweets",
           data: text
         });
+        loadTweets();
       }
     });
   });
 
+  //escape function to prevent XSS
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   //creates DOM for tweet with provided data
-  const createTweetElement = (tweetData) => {
+    const createTweetElement = (tweetData) => {
     //converts millisecond time to "time ago" format
-    const ago = moment(tweetData.created_at).fromNow();
+    const timeAgo = moment(tweetData.created_at).fromNow();
+    const escapedText = escape(tweetData.content.text)
     return $(`<article class="tweet">
     <header>
       <div class="user">
@@ -41,11 +50,11 @@ $(document).ready(function () {
       <div class="usertag">${tweetData.user.handle}</div>
     </header>
     <div class="content">
-      ${tweetData.content.text}
+      ${escapedText}
     </div>
     <footer>
       <div class="since">
-        ${ago}
+        <p>${timeAgo}</p>
       </div>
       <div class="action-icons">
         <a href="/report"><i class="bi bi-flag-fill"></i></a>
