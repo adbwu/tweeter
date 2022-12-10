@@ -1,13 +1,13 @@
 header.profile {
   background-color: #f52f57;
   background-image: url("https://www.transparenttextures.com/patterns/rice-paper-2.png");
-  padding-top: 120px;
-  height: 520px;
+  height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #ffffff;
+  font-weight: 300;
 }
 
 header.profile .profile-img, header .profile-name {

@@ -16,7 +16,7 @@ section.new-tweet {
   }
 
 .new-tweet label{
-  font-size: 24px;
+  font-size: 1em;
   font-weight: 600;
   height: 1.5;
 }
@@ -27,7 +27,7 @@ section.new-tweet {
   resize: none;
   padding: none;
   padding-top: .75em;
-  font-size: 22px;
+  font-size: .9em;
   font-weight: 600;
   width: 100%;
   height: auto;
@@ -44,14 +44,14 @@ section.new-tweet {
 
 .tweet-deny {
   color: red;
-  font-size: 14px;
+  font-size: .6em;
   align-self: flex-start;
   display: none;
 }
 
 .tweet-accept {
   color: green;
-  font-size: 14px;
+  font-size: .6em;
   align-self: flex-start;
   display: none;
 }
@@ -64,7 +64,7 @@ section.new-tweet {
   height: 1.75em;
   margin-top: .75em;
   font-family: Bungee, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 20px
+  font-size: .9em;
 }
 
 button.tweet-btn {

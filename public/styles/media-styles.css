@@ -1,0 +1,23 @@
+@media only screen and (min-width: 1024px) {
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+
+  #tweeter-content {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: space-between;
+    margin: 0 2.5% 0 2.5%;
+    padding-top: 200px;
+  }
+
+  main, header.profile {
+    margin: 0;
+  }
+
+  header.profile {
+    width: 30%;
+  }
+  main.container{
+    width: max-content;
+  }
+}
