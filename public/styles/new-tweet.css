@@ -6,8 +6,7 @@ section.new-tweet {
 
 .form-top {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
+  flex-direction: column;
   padding-top: 1em;
   padding-bottom: .75em;
   border-width: 0;
@@ -20,7 +19,6 @@ section.new-tweet {
   font-size: 24px;
   font-weight: 600;
   height: 1.5;
-  width: 40%;
 }
 
 .new-tweet textarea {
@@ -28,14 +26,34 @@ section.new-tweet {
   border: none;
   resize: none;
   padding: none;
-  font-size: 24px;
+  padding-top: .75em;
+  font-size: 22px;
   font-weight: 600;
-  width: 60%;
+  width: 100%;
   height: auto;
 }
 
 .new-tweet textarea { 
   outline: none !important;
+}
+
+.alerts p {
+  margin: 0; 
+  font-weight: 600;
+}
+
+.tweet-deny {
+  color: red;
+  font-size: 14px;
+  align-self: flex-start;
+  display: none;
+}
+
+.tweet-accept {
+  color: green;
+  font-size: 14px;
+  align-self: flex-start;
+  display: none;
 }
 
 .form-btm {

@@ -53,6 +53,17 @@
         <form id="post-tweet-form">
           <div class="form-top">
             <label for="tweet-text">What are you humming about?</label>
+            <div class="alerts">
+              <div id="too-short" class="tweet-deny">
+                <p><i class="bi bi-x-circle-fill"></i>  Tweets cannot be empty! Your tweet has not been posted.</p>
+              </div>
+              <div id="too-long" class="tweet-deny">
+                <p><i class="bi bi-x-circle-fill"></i>  Tweets must be less than 140 characters! Your tweet has not been posted.</p>
+              </div>
+              <div id="success" class="tweet-accept">
+                <p><i class="bi bi-check-circle-fill"></i>  Tweet posted!</p>
+              </div>
+            </div>
             <textarea rows="1" name="text" id="tweet-text" ></textarea>
           </div>
           <div class="form-btm">

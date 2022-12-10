@@ -10,17 +10,26 @@ $(document).ready(function () {
     $('#post-tweet-form').submit(function (event){
       event.preventDefault();
       const text = decodeURI($( this ).serialize());
-      console.log(text);
       if (decodeURI(text).length === 5) {
-        alert( "Tweets cannot be empty!" );
+        $( "#too-short" )
+        .show( "slow")
+        .delay(3000)
+        .fadeOut("slow");
       } else if (decodeURI(text).length > 146) {
-        alert( "Tweets must be 140 characters or less!" );
+        $( "#too-long" )
+        .show( "slow")
+        .delay(3000)
+        .fadeOut("slow");
       } else {
           $.ajax({
           type: "POST",
           url: "/tweets",
           data: text
         });
+        $( "#success" )
+        .show( "slow")
+        .delay(3000)
+        .fadeOut("slow");
         loadTweets();
         $("#post-tweet-form").trigger("reset");
       }
