@@ -7,8 +7,8 @@ nav {
   align-items: flex-end;
   height: 120px;
   color: #ffffff;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
   padding-bottom: .5em;
   position: fixed;
   width: 100%;
@@ -18,24 +18,32 @@ nav {
   font-family: Bungee, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   display: flex;
   font-size: 2em;
+  padding-bottom: 3px;
  }
 
- nav .call-to-action {
+ nav #call-to-action {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 2em;
+  height: 2.4em;
   font-size: 100%;
+  cursor: pointer;
  }
 
- nav .c-a-t-phrase {
+ nav .c-t-a-phrase {
   display: flex;
   justify-content: center;
-  font-size: 2em;
+  font-size: 1em;
+ }
+ nav .c-t-a-phrase p {
+  margin:0;
  }
 
- nav i {
+
+ nav #c-t-a-chevron {
   display: flex;
   justify-content: center;
   color: #F3752B;
+  top:0;
+  height: 1.4em;
  }
