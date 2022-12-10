@@ -31,5 +31,6 @@ main {
 }
 
 #tweeter-content {
-  padding-top: 120px
+  padding-top: 120px;
+  position: relative;
 }

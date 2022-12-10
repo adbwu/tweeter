@@ -1,0 +1,39 @@
+#to-top-btn {
+  position:fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  line-height: 4em;
+  vertical-align: middle;
+}
+#tt-btn-circle, 
+#tt-btn-chevron {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+#tt-btn-circle {
+  color: red;
+  font-size: 3em;
+}
+
+#tt-btn-circle:hover {
+  color: orange;
+}
+
+#tt-btn-chevron {
+  color: white;
+  font-size: 1.5em;
+  -webkit-text-stroke: 1px;
+  margin-top: -2px;
+}

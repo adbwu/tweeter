@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <!-- Styling for stretch toggle-button -->
+    <link rel="stylesheet" href="/styles/toggle-button.css" type="text/css" />
     <link rel="stylesheet" href="/styles/media-styles.css" type="text/css" />
 
     <!-- External JS -->
@@ -24,6 +26,7 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/styling-code.js"></script>
+    <script type="text/javascript" src="/scripts/toggle-button.js"></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
@@ -78,7 +81,13 @@
         </section>
         <!--Tweet-->
         <section id=tweets-container>  
-        </section>   
+        </section>
+        <div id="to-top-btn">
+          <div class="icon-stack">
+            <i id="tt-btn-circle" class="bi bi-circle-fill"></i>
+            <i id="tt-btn-chevron" class="bi bi-chevron-double-up"></i>
+          </div>
+        </div>   
       </main>
     </div>
   </body>
