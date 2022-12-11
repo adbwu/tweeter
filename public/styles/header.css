@@ -14,3 +14,16 @@ header.profile .profile-img, header .profile-name {
   display: flex;
   justify-content: center;
 }
+
+header h2 {
+  font-weight: 300;
+}
+
+header h2 strong {
+  font-weight: 600;
+}
+
+/*hides call-to-action button in header when not on mobile*/
+#c-t-a-header {
+  display: none;
+}

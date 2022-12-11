@@ -9,7 +9,7 @@ $(document).ready(function () {
   })
 
   $("#to-top-btn").click(function(){
-    $(window).scrollTop(400);
+    $(window).scrollTop(200);
     $( ".new-tweet" ).slideDown( "fast", "swing" );
   })
 

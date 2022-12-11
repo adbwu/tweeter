@@ -39,9 +39,9 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <div class="logo">tweeter</div>
-      <div id="call-to-action">
+      <div class="call-to-action" id="c-t-a-nav">
         <div class="c-t-a-phrase"><p><strong>Write </strong> a new tweet</p></div>
-        <i id="c-t-a-chevron" class="bi bi-chevron-double-down"></i>
+        <i class="bi bi-chevron-double-down c-t-a-chevron"></i>
       </div>
     </nav>
     <div id="tweeter-content">
@@ -52,6 +52,10 @@
         </div>
         <div class ="profile-name">
             <h2><strong>Allison</strong> Budziak</h2>
+            <div class="call-to-action" id="c-t-a-header">
+              <div class="c-t-a-phrase"><p><strong>Write </strong> a new tweet</p></div>
+              <i class="bi bi-chevron-double-down c-t-a-chevron"></i>
+            </div>
         </div>
       </header>
       <!-- Page-specific (main) content here -->
@@ -89,5 +93,7 @@
         </div>   
       </main>
     </div>
+    <!--empty mobile indicator for Jquery screen size check-->
+    <div id="mobile-indicator"></div>
   </body>
 </html>

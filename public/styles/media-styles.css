@@ -12,12 +12,60 @@
 
   main, header.profile {
     margin: 0;
+    margin-top: 20px;
   }
 
   header.profile {
     width: 30%;
   }
   main.container{
-    width: max-content;
+    width: 65%;
+    margin: 0;
   }
 }
+
+
+@media only screen and (max-width: 420px) {
+  nav {
+    height: 50px;
+  }
+  nav .logo {
+    font-size: 1em;
+  }
+
+  #c-t-a-nav {
+    display: none;
+  }
+
+  #c-t-a-header {
+    display: flex;
+  }
+  
+  .c-t-a-chevron {
+    color: white;
+    -webkit-text-stroke: .5px;
+  }
+
+ #tweeter-content {
+    padding-top: 50px;
+  }
+
+  header.profile {
+    height: 200px; 
+    flex-direction: row;
+    justify-content: space-around;
+  } 
+
+  header.profile .profile-img{
+    width: 30%;
+    padding: 1em 0 1em 1em;
+  }
+
+  header .profile-name{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+}
+

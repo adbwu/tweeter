@@ -84,7 +84,6 @@ $(document).ready(function () {
   const renderTweets = function(tweets) {
     tweets.forEach( (entry) => {
     const $tweet = createTweetElement(entry);
-    console.log($tweet);
     $('#tweets-container').append($tweet)});
   }
 
@@ -95,7 +94,6 @@ $(document).ready(function () {
         renderTweets(tweets);
       } else if (amount === "one") {
         const recentTweet = tweets[tweets.length - 1];
-        console.log(recentTweet);
         renderTweets([recentTweet]);
       }
     })
