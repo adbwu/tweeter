@@ -8,10 +8,9 @@ $(document).ready(function () {
   const bounce = (() => {$("#c-t-a-chevron")
   .animate({"padding-top": "+=3px"})
   .animate({"padding-top": "-=3px"});
-  bounce();
   });
 
-  bounce();
+  setInterval(bounce, 300);
 
   //code to "bounce" the nav chevron
   // function bounce() {

@@ -8,4 +8,9 @@ $(document).ready(function () {
      }
   })
 
+  $("#to-top-btn").click(function(){
+    $(window).scrollTop(400);
+    $( ".new-tweet" ).slideDown( "fast", "swing" );
+  })
+
 });
