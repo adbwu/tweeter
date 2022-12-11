@@ -1,5 +1,5 @@
 @media only screen and (min-width: 1024px) {
-  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+  /* Laptop/Desktop screen sizes and beyond styling */
 
   #tweeter-content {
     display: flex;
@@ -26,6 +26,7 @@
 
 
 @media only screen and (max-width: 420px) {
+/* Mobile Styling */
   nav {
     height: 50px;
   }

@@ -32,5 +32,6 @@ main {
 
 #tweeter-content {
   padding-top: 120px;
+  /* sets this div as what the toggle button will exist in relation to */
   position: relative;
 }
