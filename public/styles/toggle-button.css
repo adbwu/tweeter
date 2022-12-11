@@ -1,27 +1,34 @@
 #to-top-btn {
+  /* sets the button's position in relation to the div "tweets-content" */
   position:fixed;
   bottom: 0;
   right: 0;
   display: none;
   flex-direction: column;
+
+  /* set cursor to appear as pointer to communicate clickability to user */
   cursor: pointer;
 }
 
 .icon-stack {
+  /* sets background to be relative position so chevron can be placed on top */
   position: relative;
   display: inline-block;
   width: 3em;
   height: 3em;
   line-height: 3em;
   margin: 1em;
+
+  /* creates a circle background for button */
   border-radius: 50%;
-  background-color: red;
+  background-color: #A20021;
   vertical-align: middle;
   -webkit-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.36); 
-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.36);
+  box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.36);
 }
 
 #tt-btn-chevron {
+  /* positions chevron on-top of background to create button image */
   position: absolute;
   left: 0;
   width: 100%;

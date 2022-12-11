@@ -30,25 +30,15 @@
   nav {
     height: 50px;
   }
+
   nav .logo {
     font-size: 1em;
   }
 
+  /* hides "Write a new tweet" in nav bar to save space */
+
   #c-t-a-nav {
     display: none;
-  }
-
-  #c-t-a-header {
-    display: flex;
-  }
-  
-  .c-t-a-chevron {
-    color: white;
-    -webkit-text-stroke: .5px;
-  }
-
- #tweeter-content {
-    padding-top: 50px;
   }
 
   header.profile {
@@ -67,6 +57,19 @@
     flex-direction: column;
   }
 
+  /* Moves "Write a new tweet" to header, which has more space, to retain it's functionality on mobile */
+  
+  #c-t-a-header {
+    display: flex;
+  }
+  
+  .c-t-a-chevron {
+    color: white;
+    -webkit-text-stroke: .5px;
+  }
 
+ #tweeter-content {
+    padding-top: 50px;
+  }
 }
 

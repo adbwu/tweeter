@@ -1,3 +1,5 @@
+/* Styling for the New Tweet section and form */
+
 section.new-tweet {
  width: 100%;
  min-height: 160px;
@@ -26,12 +28,11 @@ section.new-tweet {
   background: none;
   border: none;
   resize: none;
-  padding: none;
-  padding-top: .75em;
+  padding: .75em .5em 0 .5em;
   font-size: .9em;
-  font-weight: 600;
+  font-weight: 300;
   width: 100%;
-  height: auto;
+  height: 2em;
 }
 
 .new-tweet textarea { 
