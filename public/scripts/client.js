@@ -34,7 +34,6 @@ $(document).ready(function () {
           data: text,
           success: singleTweet
         });
-        console.log("clientJS text " + text);
         $( "#success" )
         .show( "slow")
         .delay(3000)
@@ -90,8 +89,6 @@ $(document).ready(function () {
         renderTweets(tweets);
       } else if (amount === "one") {
         const recentTweet = tweets[tweets.length - 1];
-        console.log("tweets length: " + tweets.length);
-        console.dir("load tweets: " + recentTweet.content.text);
        renderTweets([recentTweet]);
       }
     })
