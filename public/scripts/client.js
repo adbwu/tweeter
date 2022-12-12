@@ -7,10 +7,16 @@
 
 $(document).ready(function () {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   $(function() {
     $('#post-tweet-form').submit(function (event){
       event.preventDefault();
-      const text = decodeURI($( this ).serialize());
+      const text = $( this ).serialize();
       if (decodeURI(text).length === 5) {
         $( "#too-short" )
         .show( "slow")
@@ -25,24 +31,18 @@ $(document).ready(function () {
           $.ajax({
           type: "POST",
           url: "/tweets",
-          data: text
+          data: text,
+          success: singleTweet
         });
+        console.log("clientJS text " + text);
         $( "#success" )
         .show( "slow")
         .delay(3000)
         .fadeOut("slow");
-        loadTweets("one");
         $("#post-tweet-form").trigger("reset");
       }
     });
   });
-
-  //escape function to prevent XSS
-  const escape = function (str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
 
   //creates DOM for tweet with provided data
     const createTweetElement = (tweetData) => {
@@ -73,19 +73,15 @@ $(document).ready(function () {
   </article>`      
   )};
   
-  //loads the most recent tweet
-  const loadTweetNewTweet = (() => {
-    $.get('http://localhost:8080/tweets', (tweets) => { 
-    const recentTweet = tweets[tweets.length];
-    $('#tweets-container').append(createTweetElement(recentTweet));
-  })});
-
   //loops through data, creates tweet with fuction call and renders to page
   const renderTweets = function(tweets) {
     tweets.forEach( (entry) => {
     const $tweet = createTweetElement(entry);
     $('#tweets-container').append($tweet)});
   }
+  
+  //function to allow me to pass a variable to loadtweets without having it fire immediately on "success" of .post
+  const singleTweet = () => (loadTweets("one"));
 
   //loads all tweets at start of page, or just most recent after a new one is posted
   const loadTweets = ((amount) => {
@@ -94,7 +90,9 @@ $(document).ready(function () {
         renderTweets(tweets);
       } else if (amount === "one") {
         const recentTweet = tweets[tweets.length - 1];
-        renderTweets([recentTweet]);
+        console.log("tweets length: " + tweets.length);
+        console.dir("load tweets: " + recentTweet.content.text);
+       renderTweets([recentTweet]);
       }
     })
   });
