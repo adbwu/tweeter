@@ -15,16 +15,16 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 
 #### Toggle of Tweet Form and Submission of Tweet
-!["Toggle of Tweet form, and submission of Tweet."](https://github.com/adbwu/tweeter/blob/main/docs/toggle-and-tweet.gif?raw=true)
+!["Toggle of Tweet form, and submission of Tweet."](https://github.com/adbwu/tweeter/blob/master/docs/toggle-and-tweet.gif?raw=true)
 
 #### UX Indicators of Character Limit Excess
-!["Tweet too long UX indicators with error message.](https://github.com/adbwu/tweeter/blob/main/docs/too-long.gif?raw=true)
+!["Tweet too long UX indicators with error message.](https://github.com/adbwu/tweeter/blob/master/docs/too-long.gif?raw=true)
 
 #### Go-To-Top Toggle Button
-!["Go-to-top" form toggle button appears when scrolled past header.](https://github.com/adbwu/tweeter/blob/main/docs/toggle-top.gif?raw=true)
+!["Go-to-top" form toggle button appears when scrolled past header.](https://github.com/adbwu/tweeter/blob/master/docs/toggle-top.gif?raw=true)
 
 #### Responsiveness of UI
-!["Design is responsive to three screen widths."](https://github.com/adbwu/tweeter/blob/main/docs/responsive.gif?raw=true)
+!["Design is responsive to three screen widths."](https://github.com/adbwu/tweeter/blob/master/docs/responsive.gif?raw=true)
 
 ## Dependencies
 
