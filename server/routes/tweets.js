@@ -23,10 +23,8 @@ module.exports = function(DataHelpers) {
       console.log(req.body.text); 
       return req.body.text;
     }
-    console.log(req.body.text); 
+
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
-    const text = (req.body.text).replace(/\r\n/g, " ")
-    console.log(text);
     const tweet = {
       user: user,
       content: {
@@ -34,7 +32,6 @@ module.exports = function(DataHelpers) {
       },
       created_at: Date.now()
     };
-    console.log(tweet);
 
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
